@@ -1,6 +1,10 @@
 const basic = require('@antfu/eslint-config-basic')
 
 module.exports = {
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'eslint-plugin-tsdoc',
+  ],
   extends: [
     '@antfu/eslint-config-basic',
     'plugin:import/typescript',
@@ -13,6 +17,8 @@ module.exports = {
   },
   overrides: basic.overrides,
   rules: {
+    // TSDOC
+    'tsdoc/syntax': 'warn',
     'import/named': 'off',
 
     // TS
