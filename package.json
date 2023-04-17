@@ -18,5 +18,8 @@
     "eslint-plugin-antfu": "link:./packages/eslint-plugin-antfu",
     "rimraf": "^4.4.1",
     "typescript": "^5.0.3"
+  },
+  "publishConfig": {
+    "publish-branch": "laddish"
   }
 }
