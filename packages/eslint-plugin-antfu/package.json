@@ -22,5 +22,8 @@
     "@types/node": "^18.15.11",
     "unbuild": "^1.2.0",
     "vitest": "^0.29.8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
