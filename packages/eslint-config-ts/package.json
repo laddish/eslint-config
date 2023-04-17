@@ -1,6 +1,7 @@
 {
   "name": "@laddish/eslint-config-ts",
   "version": "0.0.1",
+  "private": false,
   "description": "",
   "author": "Anthony Fu <anthonyfu117@hotmail.com> (https://github.com/antfu/)",
   "license": "MIT",
