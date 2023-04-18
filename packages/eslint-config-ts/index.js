@@ -174,5 +174,18 @@ module.exports = {
         '@typescript-eslint/triple-slash-reference': 'off',
         // handled by unused-imports/no-unused-imports
         '@typescript-eslint/no-unused-vars': 'off',
+        // dms
+        '@typescript-eslint/no-empty-function': 'error',
+        // vue3 中的源码都是可以使用 Function
+        // https://github.com/vuejs/core/search?q=callWithErrorHandling&type=code
+        '@typescript-eslint/ban-types': [
+            'error',
+            {
+                types: {
+                    Function: 'ignore',
+                    Object: 'ignore',
+                },
+            },
+        ],
     },
 };
