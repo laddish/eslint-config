@@ -35,13 +35,15 @@ module.exports = {
     plugins: [
         'html',
         'unicorn',
-        'antfu',
+        'laddish',
         'no-only-tests',
         'unused-imports',
     ],
     settings: {
         'import/resolver': {
-            node: { extensions: ['.js', '.mjs'] },
+            node: {
+                extensions: ['.js', '.mjs'],
+            },
         },
     },
     overrides: [
@@ -53,11 +55,17 @@ module.exports = {
                 'jsonc/comma-dangle': ['error', 'never'],
                 'jsonc/comma-style': ['error', 'last'],
                 'jsonc/indent': ['error', 2],
-                'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],
+                'jsonc/key-spacing': ['error', {
+                    beforeColon: false, afterColon: true,
+                }],
                 'jsonc/no-octal-escape': 'error',
-                'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
+                'jsonc/object-curly-newline': ['error', {
+                    multiline: true, consistent: true,
+                }],
                 'jsonc/object-curly-spacing': ['error', 'always'],
-                'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+                'jsonc/object-property-newline': ['error', {
+                    allowMultiplePropertiesPerLine: true,
+                }],
             },
         },
         {
@@ -123,7 +131,9 @@ module.exports = {
                     },
                     {
                         pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-                        order: { type: 'asc' },
+                        order: {
+                            type: 'asc',
+                        },
                     },
                     {
                         pathPattern: '^exports.*$',
@@ -151,7 +161,9 @@ module.exports = {
         {
             files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
             rules: {
-                'no-void': ['error', { allowAsStatement: true }],
+                'no-void': ['error', {
+                    allowAsStatement: true,
+                }],
             },
         },
         {
@@ -198,23 +210,29 @@ module.exports = {
         'import/no-absolute-path': 'off',
 
         // Common
-        'semi': ['error', 'never'],
+        semi: ['error', 'never'],
         // 'curly': ['error', 'multi-or-nest', 'consistent'],
-        'quotes': ['error', 'single'],
+        quotes: ['error', 'single'],
         'quote-props': ['error', 'consistent-as-needed'],
 
         'unused-imports/no-unused-imports': 'error',
         'unused-imports/no-unused-vars': [
             'warn',
-            { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+            {
+                vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_',
+            },
         ],
 
         // 'no-param-reassign': 'off',
         'array-bracket-spacing': ['error', 'never'],
-        'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+        'brace-style': ['error', 'stroustrup', {
+            allowSingleLine: true,
+        }],
         'block-spacing': ['error', 'always'],
-        'camelcase': 'off',
-        'comma-spacing': ['error', { before: false, after: true }],
+        camelcase: 'off',
+        'comma-spacing': ['error', {
+            before: false, after: true,
+        }],
         'comma-style': ['error', 'last'],
         'comma-dangle': ['error', 'always-multiline'],
         'no-constant-condition': 'warn',
@@ -222,8 +240,12 @@ module.exports = {
         // 'no-console': ['error', { allow: ['warn', 'error'] }],
         'no-cond-assign': ['error', 'always'],
         'func-call-spacing': ['off', 'never'],
-        'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-        'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+        'key-spacing': ['error', {
+            beforeColon: false, afterColon: true,
+        }],
+        indent: ['error', 4, {
+            SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1,
+        }],
         'no-restricted-syntax': [
             'error',
             'DebuggerStatement',
@@ -270,7 +292,9 @@ module.exports = {
         'prefer-spread': 'error',
         'prefer-template': 'error',
         'template-curly-spacing': 'error',
-        'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+        'arrow-parens': ['error', 'as-needed', {
+            requireForBlockBody: true,
+        }],
         'generator-star-spacing': 'off',
         'spaced-comment': ['error', 'always', {
             line: {
@@ -288,8 +312,8 @@ module.exports = {
         'array-callback-return': 'error',
         'block-scoped-var': 'error',
         'consistent-return': 'off',
-        'complexity': ['off', 11],
-        'eqeqeq': ['error', 'smart'],
+        complexity: ['off', 11],
+        // eqeqeq: ['error', 'smart'],
         'no-alert': 'warn',
         'no-case-declarations': 'error',
         'no-multi-spaces': 'error',
@@ -301,7 +325,9 @@ module.exports = {
         'require-await': 'off',
         'no-return-assign': 'off',
         'operator-linebreak': ['error', 'before'],
-        'max-statements-per-line': ['error', { max: 1 }],
+        // 'max-statements-per-line': ['error', {
+        //     max: 1,
+        // }],
 
         // unicorns
         // Pass error message when throwing errors
@@ -327,7 +353,9 @@ module.exports = {
         // Use new when throwing error
         'unicorn/throw-new-error': 'error',
 
-        'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
+        'no-use-before-define': ['error', {
+            functions: false, classes: false, variables: true,
+        }],
         'eslint-comments/disable-enable-pair': 'off',
         'import/no-named-as-default-member': 'off',
         'import/no-named-as-default': 'off',
@@ -346,13 +374,15 @@ module.exports = {
         ],
 
         // yml
-        'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
+        'yml/quotes': ['error', {
+            prefer: 'single', avoidEscape: false,
+        }],
         'yml/no-empty-document': 'off',
 
-        // antfu
-        // 'antfu/if-newline': 'error',
-        'antfu/import-dedupe': 'error',
-        // 'antfu/prefer-inline-type-import': 'error',
+        // laddish
+        // 'laddish/if-newline': 'error',
+        'laddish/import-dedupe': 'error',
+        // 'laddish/prefer-inline-type-import': 'error',
 
         // dms
         'eslint-comments/no-unlimited-disable': 'off',
@@ -364,12 +394,12 @@ module.exports = {
         'no-param-reassign': 'error',
         'no-useless-escape': 'error',
         'no-console': 'error',
-        'object-curly-newline': 'error',
+        // 'object-curly-newline': 'error',
         'no-unused-vars': 'off',
-        camelcase: 'off',
+        // camelcase: 'off',
         'no-undef': 'off',
         // 'max-statements-per-line': 'off',
-        indent: ['error', 4],
+        // indent: ['error', 4],
         'object-curly-newline': ['error', 'always'],
         eqeqeq: ['error', 'always'],
         'one-var-declaration-per-line': ['error', 'always'],
@@ -378,9 +408,9 @@ module.exports = {
         // 对于类型和变量两种引入会报错
         'no-duplicate-imports': ['error'],
         // 'arrow-body-style': ['error', 'always'],
-        'comma-style': ['error', 'last'],
+        // 'comma-style': ['error', 'last'],
         'guard-for-in': 'error',
-        'spaced-comment': ['error', 'always'],
+        // 'spaced-comment': ['error', 'always'],
         'no-prototype-builtins': 'warn',
         'max-len': ['error', 200],
     },
