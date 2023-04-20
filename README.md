@@ -61,11 +61,11 @@ Type aware rules are enabled when a `tsconfig.eslint.json` is found in the proje
 
 ```js
 // .eslintrc.js
-process.env.ESLINT_TSCONFIG = 'tsconfig.json'
+process.env.ESLINT_TSCONFIG = 'tsconfig.json';
 
 module.exports = {
-  extends: '@antfu'
-}
+    extends: '@antfu'
+};
 ```
 
 ### Lint Staged
@@ -126,3 +126,14 @@ Or you can always fork this repo and make your own.
 ## License
 
 [MIT](./LICENSE) License &copy; 2019-PRESENT [Anthony Fu](https://github.com/antfu)
+
+
+
+## 同步到 npm mirror
+
+http://www.npmmirror.com/sync/eslint-plugin-laddish
+http://www.npmmirror.com/sync/@laddish/eslint-config-vue
+http://www.npmmirror.com/sync/@laddish/eslint-config-basic
+http://www.npmmirror.com/sync/@laddish/eslint-config-ts
+http://www.npmmirror.com/sync/@laddish/eslint-config-vue
+http://www.npmmirror.com/sync/@laddish/eslint-config
