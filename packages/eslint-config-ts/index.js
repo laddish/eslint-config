@@ -247,5 +247,8 @@ module.exports = {
         'spaced-comment': ['error', 'always'],
         'no-prototype-builtins': 'warn',
         'max-len': ['error', 200],
+        'no-multiple-empty-lines': ['error', {
+            max: 1, maxBOF: 0, maxEOF: 0,
+        }],
     },
 };
