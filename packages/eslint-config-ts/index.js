@@ -174,6 +174,7 @@ module.exports = {
         '@typescript-eslint/triple-slash-reference': 'off',
         // handled by unused-imports/no-unused-imports
         '@typescript-eslint/no-unused-vars': 'off',
+
         // dms
         '@typescript-eslint/no-empty-function': 'error',
         // vue3 中的源码都是可以使用 Function
@@ -191,7 +192,7 @@ module.exports = {
         'no-unexpected-multiline': 'error',
         'no-extra-semi': 'error',
         'nonblock-statement-body-position': 'error',
-        // 'max-statements-per-line': 0,
+        'max-statements-per-line': 0,
         '@typescript-eslint/no-shadow': 'error',
         'no-param-reassign': 'error',
         'no-useless-escape': 'error',
@@ -200,7 +201,7 @@ module.exports = {
         'no-unused-vars': 'off',
         camelcase: 'off',
         'no-undef': 'off',
-        'max-statements-per-line': 'off',
+        // 'max-statements-per-line': 'off',
         indent: ['error', 4],
         'object-curly-newline': ['error', 'always'],
         eqeqeq: ['error', 'always'],
